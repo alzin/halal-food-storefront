@@ -120,8 +120,6 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
                           e.preventDefault();
                           e.stopPropagation();
                           addItem(product);
-                          setIsFocused(false);
-                          setQuery("");
                         }}
                         aria-label={`Add ${product.name} to cart`}
                         className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-surface text-primary transition-all duration-200 hover:bg-primary hover:text-white"

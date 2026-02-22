@@ -132,7 +132,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <ProductGrid products={bestSellers} />
+          <ProductGrid products={bestSellers} context="bestsellers" />
         </div>
       </section>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <ProductGrid products={deals} columns={3} />
+          <ProductGrid products={deals} columns={3} context="deals" />
         </section>
       )}
 

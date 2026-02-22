@@ -129,7 +129,7 @@ export default function CategoryPage() {
 
       {/* Product grid */}
       {filtered.length > 0 ? (
-        <ProductGrid products={filtered} />
+        <ProductGrid products={filtered} context={`category-${slug}`} />
       ) : (
         <EmptyState
           icon={PackageSearch}

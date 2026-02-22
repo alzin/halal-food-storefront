@@ -10,10 +10,12 @@ import type { Product } from "../_data/mock";
 interface ProductCardProps {
   product: Product;
   className?: string;
+  context?: string;
 }
 
-export function ProductCard({ product, className = "" }: ProductCardProps) {
-  const { addItem } = useCart();
+export function ProductCard({ product, className = "", context = "grid" }: ProductCardProps) {
+  const { addItemWithAnimation } = useCart();
+  const imageId = `product-image-${context}-${product.id}`;
 
   const colorMap: Record<string, string> = {
     "fresh-meat": "from-red-100 to-red-50",
@@ -41,6 +43,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            id={imageId}
             src={product.images[0]}
             alt={product.name}
             loading="lazy"
@@ -93,7 +96,12 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
           {product.inStock ? (
             <button
               type="button"
-              onClick={() => addItem(product)}
+              onClick={(e) => {
+                const imageElement = document.getElementById(imageId);
+                if (imageElement) {
+                  addItemWithAnimation(product, imageElement);
+                }
+              }}
               aria-label={`Add ${product.name} to cart`}
               className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-cta text-white shadow-sm transition-all duration-200 hover:bg-cta-hover hover:shadow-md"
             >

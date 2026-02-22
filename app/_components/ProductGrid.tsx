@@ -5,12 +5,14 @@ interface ProductGridProps {
   products: Product[];
   columns?: 2 | 3 | 4;
   className?: string;
+  context?: string;
 }
 
 export function ProductGrid({
   products,
   columns = 4,
   className = "",
+  context = "grid",
 }: ProductGridProps) {
   const colClasses = {
     2: "grid-cols-2",
@@ -20,8 +22,12 @@ export function ProductGrid({
 
   return (
     <div className={`grid gap-4 ${colClasses[columns]} ${className}`}>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {products.map((product, index) => (
+        <ProductCard 
+          key={product.id} 
+          product={product} 
+          context={`${context}-${index}`}
+        />
       ))}
     </div>
   );

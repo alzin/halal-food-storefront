@@ -14,7 +14,7 @@ export default function WishlistPage() {
       </h2>
 
       {wishlistItems.length > 0 ? (
-        <ProductGrid products={wishlistItems} columns={3} />
+        <ProductGrid products={wishlistItems} columns={3} context="wishlist" />
       ) : (
         <EmptyState
           icon={Heart}

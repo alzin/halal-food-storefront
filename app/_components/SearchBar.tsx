@@ -14,7 +14,7 @@ interface SearchBarProps {
 }
 
 export function SearchBar({ variant = "header", className = "" }: SearchBarProps) {
-  const { addItem } = useCart();
+  const { addItemWithAnimation } = useCart();
   const [query, setQuery] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -95,6 +95,7 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
                   >
                     <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg">
                       <Image
+                        id={`search-product-image-${product.id}`}
                         src={product.images[0]}
                         alt={product.name}
                         fill
@@ -121,7 +122,12 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          addItem(product);
+                          const imageElement = document.getElementById(
+                            `search-product-image-${product.id}`
+                          );
+                          if (imageElement) {
+                            addItemWithAnimation(product, imageElement);
+                          }
                         }}
                         aria-label={`Add ${product.name} to cart`}
                         className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-surface text-primary transition-all duration-200 hover:bg-primary hover:text-white"

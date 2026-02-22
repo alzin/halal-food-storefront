@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Varela_Round } from "next/font/google";
-import { CartProvider } from "./_context/CartContext";
+import { CartProviderWrapper } from "./_components/CartProviderWrapper";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { CartDrawer } from "./_components/CartDrawer";
@@ -68,12 +68,12 @@ export default function RootLayout({
       <body
         className={`${nunitoSans.variable} ${varelaRound.variable} font-body antialiased`}
       >
-        <CartProvider>
+        <CartProviderWrapper>
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <CartDrawer />
-        </CartProvider>
+        </CartProviderWrapper>
       </body>
     </html>
   );

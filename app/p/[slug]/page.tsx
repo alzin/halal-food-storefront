@@ -30,7 +30,7 @@ export default function ProductDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const product = getProductBySlug(slug);
   const [quantity, setQuantity] = useState(1);
-  const { addItem } = useCart();
+  const { addItemWithAnimation } = useCart();
 
   if (!product) {
     return (
@@ -109,6 +109,7 @@ export default function ProductDetailPage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
+              id={`product-detail-image-${product.id}`}
               src={product.images[0]}
               alt={product.name}
               className="h-full w-full object-cover"
@@ -229,7 +230,14 @@ export default function ProductDetailPage() {
 
                 <button
                   type="button"
-                  onClick={() => addItem(product, quantity)}
+                  onClick={() => {
+                    const imageElement = document.getElementById(
+                      `product-detail-image-${product.id}`
+                    );
+                    if (imageElement) {
+                      addItemWithAnimation(product, imageElement, quantity);
+                    }
+                  }}
                   className="flex cursor-pointer items-center gap-2 rounded-lg bg-cta px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-cta-hover hover:-translate-y-0.5"
                 >
                   <ShoppingCart className="h-5 w-5" />
@@ -311,7 +319,7 @@ export default function ProductDetailPage() {
           <h2 className="mb-6 font-heading text-xl font-bold text-text">
             You Might Also Like
           </h2>
-          <ProductGrid products={related} />
+          <ProductGrid products={related} context="related" />
         </section>
       )}
     </div>

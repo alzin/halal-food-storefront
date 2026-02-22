@@ -28,7 +28,9 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
             p.category.toLowerCase().includes(query.toLowerCase())
         )
         .slice(0, 15)
-      : [];
+      : isFocused
+        ? products.slice(0, 15)
+        : [];
 
   const showResults = isFocused && filtered.length > 0;
 

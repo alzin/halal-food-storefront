@@ -89,7 +89,7 @@ export function CartDrawer() {
 
         {/* Items */}
         {items.length === 0 ? (
-          <div className="flex-1 px-5">
+          <div className="flex flex-1 items-center justify-center px-5">
             <EmptyState
               icon={ShoppingBag}
               title="Your cart is empty"

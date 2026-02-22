@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <Image
-                src="/logo.png"
+                src="/altaf_logo.svg"
                 alt="Altaf Halal Food"
                 width={36}
                 height={36}

@@ -55,7 +55,7 @@ export function Header() {
             className="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
             <Image
-              src="/logo.png"
+              src="/altaf_logo.svg"
               alt="Altaf Halal Food - Premium Halal Groceries with AU Halal Certification"
               width={48}
               height={48}

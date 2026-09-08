@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Menu,
   ShoppingCart,
@@ -10,6 +9,7 @@ import {
   Heart,
   Search,
   X,
+  Store,
 } from "lucide-react";
 import { useCart } from "../_context/CartContext";
 import { SearchBar } from "./SearchBar";
@@ -48,23 +48,18 @@ export function Header() {
             <Menu className="h-5 w-5" />
           </button>
 
-          {/* Logo */}
+          {/* Brand */}
           <Link
             href="/"
-            aria-label="Altaf Halal Food home page"
+            aria-label="Halal Food home page"
             className="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <Image
-              src="/altaf_logo.svg"
-              alt="Altaf Halal Food - Premium Halal Groceries with AU Halal Certification"
-              width={48}
-              height={48}
-              className="h-9 w-auto sm:h-12"
-              priority
-            />
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white sm:h-10 sm:w-10">
+              <Store className="h-5 w-5" />
+            </span>
             <div className="hidden sm:block">
               <p className="text-sm font-bold leading-tight text-text font-heading">
-                Altaf Halal Food
+                Halal Food
               </p>
               <p className="text-[10px] leading-tight text-text-muted">
                 Premium Halal Groceries

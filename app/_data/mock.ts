@@ -1,4 +1,4 @@
-/* ── Mock Data for Altaf Halal Food ── */
+/* ── Mock Data for Halal Food ── */
 
 export interface Category {
   id: string;
@@ -892,7 +892,7 @@ export const addresses: Address[] = [
   {
     id: "addr-1",
     label: "Home",
-    name: "Altaf Ahmad",
+    name: "Sample Customer",
     phone: "090-1234-5678",
     postalCode: "150-0001",
     prefecture: "Tokyo",
@@ -904,7 +904,7 @@ export const addresses: Address[] = [
   {
     id: "addr-2",
     label: "Office",
-    name: "Altaf Ahmad",
+    name: "Sample Customer",
     phone: "080-9876-5432",
     postalCode: "100-0005",
     prefecture: "Tokyo",

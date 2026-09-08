@@ -1,8 +1,8 @@
-# Altaf Halal Food
+# Halal Food Storefront
 
 A polished demo storefront for halal groceries in Japan, built with Next.js, React, TypeScript, and Tailwind CSS.
 
-Live site: https://alzin.github.io/Altaf-Halal-Test/
+Live site: https://alzin.github.io/halal-food-storefront/
 
 ## Features
 

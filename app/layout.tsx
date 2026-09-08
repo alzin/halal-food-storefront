@@ -6,7 +6,7 @@ import { Footer } from "./_components/Footer";
 import { CartDrawer } from "./_components/CartDrawer";
 import "./globals.css";
 
-const siteUrl = "https://alzin.github.io/Altaf-Halal-Test";
+const siteUrl = "https://alzin.github.io/halal-food-storefront";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -22,7 +22,7 @@ const varelaRound = Varela_Round({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Altaf Halal Food | Premium Halal Groceries in Japan",
+  title: "Halal Food | Premium Halal Groceries in Japan",
   description:
     "Shop certified halal meat, spices, pantry staples, and fresh produce. Fast delivery across Japan.",
   icons: {
@@ -39,25 +39,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Altaf Halal Food",
-    title: "Altaf Halal Food | Premium Halal Groceries in Japan",
+    siteName: "Halal Food",
+    title: "Halal Food | Premium Halal Groceries in Japan",
     description:
       "Shop certified halal meat, spices, pantry staples, and fresh produce. Fast delivery across Japan.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/hero.png",
         width: 1200,
         height: 630,
-        alt: "Altaf Halal Food - Premium Halal Groceries",
+        alt: "Halal groceries and fresh ingredients",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Altaf Halal Food | Premium Halal Groceries in Japan",
+    title: "Halal Food | Premium Halal Groceries in Japan",
     description:
       "Shop certified halal meat, spices, pantry staples, and fresh produce. Fast delivery across Japan.",
-    images: ["/og-image.png"],
+    images: ["/hero.png"],
   },
 };
 

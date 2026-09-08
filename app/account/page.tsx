@@ -44,7 +44,7 @@ export default function AccountOverviewPage() {
       <div className="mb-8 rounded-xl border border-border bg-gradient-to-r from-surface to-white p-6">
         <p className="text-sm text-text-muted">Welcome back,</p>
         <h2 className="font-heading text-xl font-bold text-text">
-          Altaf Ahmad
+          Sample Customer
         </h2>
         <p className="mt-1 text-sm text-text-muted">
           Member since January 2024

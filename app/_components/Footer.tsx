@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Store } from "lucide-react";
 
 const footerLinks = {
   shop: [
@@ -35,16 +34,12 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <Image
-                src="/altaf_logo.svg"
-                alt="Altaf Halal Food"
-                width={36}
-                height={36}
-                className="h-9 w-9 rounded-lg object-contain"
-              />
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
+                <Store className="h-5 w-5" />
+              </span>
               <div>
                 <p className="text-sm font-bold leading-tight text-text font-heading">
-                  Altaf Halal Food
+                  Halal Food
                 </p>
                 <p className="text-[10px] leading-tight text-text-muted">
                   Premium Halal Groceries
@@ -66,7 +61,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-text-muted">
                 <Mail className="h-4 w-4 shrink-0 text-primary" />
-                <span>hello@altafhalalfood.jp</span>
+                <span>hello@halalfood.example</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-text-muted">
                 <Clock className="h-4 w-4 shrink-0 text-primary" />
@@ -137,7 +132,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-text-muted sm:flex-row">
-          <p>&copy; 2026 Altaf Halal Food. All rights reserved.</p>
+          <p>&copy; 2026 Halal Food. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#" className="cursor-pointer transition-colors duration-200 hover:text-primary">
               Privacy Policy

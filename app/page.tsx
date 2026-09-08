@@ -21,6 +21,8 @@ import {
 export default function HomePage() {
   const bestSellers = getBestSellers();
   const deals = getDeals();
+  const assetBasePath =
+    process.env.GITHUB_PAGES === "true" ? "/halal-food-storefront" : "";
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function HomePage() {
         {/* Background image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{ backgroundImage: 'url(/hero.png)' }}
+          style={{ backgroundImage: `url(${assetBasePath}/hero.png)` }}
           aria-hidden="true"
         />
         

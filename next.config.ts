@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const repoName = "Altaf-Halal-Test";
+const repoName = "halal-food-storefront";
 
 const nextConfig: NextConfig = {
   output: "export",

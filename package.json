@@ -1,7 +1,8 @@
 {
   "name": "ux_pro_test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",

@@ -43,15 +43,18 @@ function FlyingImage({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Trigger animation on mount
-    setMounted(true);
+    const frame = requestAnimationFrame(() => {
+      setMounted(true);
+    });
 
-    // Clean up after animation completes
     const timer = setTimeout(() => {
       onComplete();
     }, 800); // Match animation duration
 
-    return () => clearTimeout(timer);
+    return () => {
+      cancelAnimationFrame(frame);
+      clearTimeout(timer);
+    };
   }, [onComplete]);
 
   const deltaX = item.endX - item.startX;

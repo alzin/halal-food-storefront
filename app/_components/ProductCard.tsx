@@ -96,7 +96,7 @@ export function ProductCard({ product, className = "", context = "grid" }: Produ
           {product.inStock ? (
             <button
               type="button"
-              onClick={(e) => {
+              onClick={() => {
                 const imageElement = document.getElementById(imageId);
                 if (imageElement) {
                   addItemWithAnimation(product, imageElement);

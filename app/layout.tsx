@@ -6,6 +6,8 @@ import { Footer } from "./_components/Footer";
 import { CartDrawer } from "./_components/CartDrawer";
 import "./globals.css";
 
+const siteUrl = "https://alzin.github.io/Altaf-Halal-Test";
+
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   variable: "--font-nunito",
@@ -19,6 +21,7 @@ const varelaRound = Varela_Round({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Altaf Halal Food | Premium Halal Groceries in Japan",
   description:
     "Shop certified halal meat, spices, pantry staples, and fresh produce. Fast delivery across Japan.",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://altaf-halal-test.vercel.app",
+    url: siteUrl,
     siteName: "Altaf Halal Food",
     title: "Altaf Halal Food | Premium Halal Groceries in Japan",
     description:
